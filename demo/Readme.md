@@ -6,6 +6,6 @@ For solution called Extended.WebApi, will start with the default WebAPI project 
 Logging, Model Validation, Exception Handling and so on. 
 
 ## Steps
-* 1 - Clean Default Solution
-* 2 - Add Logging support
-* 
+* 1 - Clean Default Solution.
+* 2 - Add Logging support.
+* 3 - Add Global Exception Handling.
