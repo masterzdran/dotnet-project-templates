@@ -1,10 +1,11 @@
 using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.Configuration;
 
 namespace Extended.WebApi.Extensions
 {
     public static class IApplicationBuilderExtensions
     {
-        public static void UseCustomSwagger(this IApplicationBuilder app)
+        public static void UseCustomSwagger(this IApplicationBuilder app, IConfiguration configuration)
         {
             // Enable middleware to serve generated Swagger as a JSON endpoint.
             app.UseSwagger();
@@ -13,7 +14,7 @@ namespace Extended.WebApi.Extensions
             // specifying the Swagger JSON endpoint.
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+                c.SwaggerEndpoint(configuration["SwaggerDoc:SwaggerEndpoint"], configuration["SwaggerDoc:ApiName"]);
             });
         }
     }

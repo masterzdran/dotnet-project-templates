@@ -17,6 +17,9 @@ namespace Extended.WebApi
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>()
+                        .CaptureStartupErrors(true)  
+                        // Add Custom Configuration Files
+                        .UseCustomConfiguration()
                         // Add Serilog
                         .UseSerilogAsLogger();
                 })

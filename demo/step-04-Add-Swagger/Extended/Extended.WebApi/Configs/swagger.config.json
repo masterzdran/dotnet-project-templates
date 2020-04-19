@@ -1,0 +1,20 @@
+{
+  "SwaggerDoc": {
+    "SwaggerEndpoint": "/swagger/v1/swagger.json",
+    "ApiName": "My API V1",
+    "Name": "v1",
+    "Version": "v1",
+    "Title": "ToDo API",
+    "Description": "A simple example ASP.NET Core Web API",
+    "TermsOfService": "https://example.com/terms",
+    "Contact": {
+      "Name": "Shayne Boyer",
+      "Email": "no@rmail.com",
+      "Url": "https://twitter.com/spboyer"
+    },
+    "License": {
+      "Name": "Use under LICX",
+      "Url": "https://example.com/license"
+    }
+  }
+}

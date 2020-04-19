@@ -37,6 +37,11 @@
 
     <ItemGroup>
       <Content Remove="Helpers\ValidationResultHelper\**" />
+      <Content Update="Configs\swagger.config.json">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
     </ItemGroup>
 
 

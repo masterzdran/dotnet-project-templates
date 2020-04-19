@@ -26,7 +26,7 @@ namespace Extended.WebApi
             services
                 .AddCustomMvc()
                 .AddCustomConfiguration()
-                .AddCustomSwagger();
+                .AddCustomSwagger(Configuration);
 
         }
 
@@ -40,7 +40,7 @@ namespace Extended.WebApi
             // Add Serilog
             app.UseSerilogRequestLogging();
             // Add Swagger
-            app.UseCustomSwagger();
+            app.UseCustomSwagger(Configuration);
             
             app.UseHttpsRedirection();
 

@@ -6,6 +6,7 @@
       "Serilog.Enrichers.Process",
       "Serilog.Sinks.File",
       "Serilog.Sinks.Async",
+      "Serilog.Sinks.Trace",
       "Serilog.Exceptions"
     ],
     "MinimumLevel": {
@@ -51,7 +52,14 @@
                 "rollOnFileSizeLimit": "true",
                 "formatter": "Serilog.Formatting.Compact.RenderedCompactJsonFormatter, Serilog.Formatting.Compact"
               }
-            }
+            },
+            {
+              "Name": "Trace",
+              "Args": {
+                "outputTemplate": "{Timestamp:yyyy-MM-dd HH:mm:ss.ffffff zzz} {MachineName} [{AppVersion}] [{Level:u3}] {ProcessId}, [{RequestId}] {SourceContext} : {Message} Scope:{Scope}{NewLine}{Exception}",
+                "formatter": "Serilog.Formatting.Compact.RenderedCompactJsonFormatter, Serilog.Formatting.Compact"
+              }
+            }            
           ]
         }
       }
